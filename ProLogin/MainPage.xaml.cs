@@ -13,7 +13,7 @@ namespace ProLogin
         public MainPage()
         {
             InitializeComponent();
-            loginBtn.Clicked += LoginBtn_Clicked;sws
+            loginBtn.Clicked += LoginBtn_Clicked;
         }
 
         private void LoginBtn_Clicked(object sender, EventArgs e)
