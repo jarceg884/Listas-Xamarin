@@ -13,12 +13,12 @@ namespace ProLogin
         public MainPage()
         {
             InitializeComponent();
-            loginBtn.Clicked += LoginBtn_Clicked;
+            loginBtn.Clicked += LoginBtn_Clicked;sws
         }
 
         private void LoginBtn_Clicked(object sender, EventArgs e)
         {
-            // Obtener el usuario y la contraseña ingresados por el usuario
+            // Obtener el usuario y la contraseña inssgresados por el usuario
             string usuarioIngresado = usuario.Text;
             string contraseñaIngresada = contraseña.Text;
 
