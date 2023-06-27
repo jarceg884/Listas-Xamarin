@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProLogin.MainPage">
+
+    <StackLayout BackgroundColor="Beige"  >
+        <Grid>
+            <StackLayout Padding="0" Margin="0" >
+                <Frame HeightRequest="150" BackgroundColor="Beige" Padding="0" Margin="10,20">
+                    <Image Source="https://cdn-icons-png.flaticon.com/512/2490/2490402.png" Aspect="AspectFill" Margin="80,-0"/>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Margin="-40,100,250,10" >
+                <Frame BackgroundColor="Green" WidthRequest="200" HeightRequest="80" CornerRadius="60">
+                    <Label Text="LOG IN" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontSize="60" FontAttributes="Bold"/>
+                </Frame>
+
+            </StackLayout>
+
+
+            <StackLayout Padding="0" Margin="30,350,30,0" HorizontalOptions="FillAndExpand">
+                <Frame  BackgroundColor="Beige" HeightRequest="300" HasShadow="False" Padding="0" Margin="0">
+
+                    <StackLayout>
+
+
+
+
+                        <StackLayout Padding="0" Margin="15,10">
+
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                        <Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+
+                                    <Entry x:Name="usuario" Placeholder="Usuario" TextColor="HotPink" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="Beige" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                        <Image Source="https://images.all-free-download.com/images/graphicthumb/lock_icon_6813906.jpg" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+
+
+
+                                    <Entry x:Name="contraseña" Placeholder="Contraseña" IsPassword="True" TextColor="HotPink" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <StackLayout  Orientation="Horizontal">
+
+
+
+
+
+
+                            </StackLayout>
+
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                <Button Text="LOG IN" x:Name="loginBtn" BackgroundColor="GreenYellow" TextColor="Black" FontSize="Medium" FontAttributes="Bold" CornerRadius="60" />
+                            </StackLayout>
+
+
+
+
+
+                        </StackLayout>
+
+
+                    </StackLayout>
+
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>
