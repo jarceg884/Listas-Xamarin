@@ -5,18 +5,20 @@
 
     <StackLayout BackgroundColor="Beige"  >
         <Grid>
-            <StackLayout Padding="0" Margin="0" >
-                <Frame HeightRequest="150" BackgroundColor="Beige" Padding="0" Margin="10,20">
-                    <Image Source="https://cdn-icons-png.flaticon.com/512/2490/2490402.png" Aspect="AspectFill" Margin="80,-0"/>
-                </Frame>
-            </StackLayout>
 
-            <StackLayout Margin="0,200,70,0" HorizontalOptions="EndAndExpand" VerticalOptions="Fill">
+            <StackLayout Margin="0,50,00,0" HorizontalOptions="EndAndExpand" VerticalOptions="Fill">
                 <Frame BackgroundColor="Green" WidthRequest="200" HeightRequest="80" CornerRadius="60">
-                    <Label Text="LOG IN" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontSize="60" FontAttributes="Bold"/>
+                    <Label Text="LOG IN" HorizontalOptions="Fill" VerticalOptions="Fill" TextColor="White" FontSize="60" FontAttributes="Bold"/>
                 </Frame>
 
             </StackLayout>
+
+            <StackLayout Padding="0" Margin="0" >
+                 <Image Source="LOGO.PNG" Aspect="AspectFill" Margin="80,-0"/>
+            </StackLayout>
+
+
+           
 
 
             <StackLayout Padding="0" Margin="30,350,30,0" HorizontalOptions="FillAndExpand">
