@@ -2,7 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace ProLogin
+namespace Menu
 {
     public partial class App : Application
     {
@@ -10,10 +10,7 @@ namespace ProLogin
         {
             InitializeComponent();
 
-            //Inicialización de NavigationPage
-            MainPage = new NavigationPage(new MainPage());
-
-
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

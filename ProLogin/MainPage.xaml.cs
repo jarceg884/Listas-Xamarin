@@ -31,6 +31,10 @@ namespace ProLogin
             {
                 // Iniciar sesión exitosamente
                 DisplayAlert("Inicio de sesión", "¡Inicio de sesión exitoso!", "Aceptar");
+
+                //Cambio de página a menú en caso de ingreso éxitoso
+                ((NavigationPage)this.Parent).PushAsync(new Menu());
+
             }
             else
             {

@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProLogin.Android", "ProLogi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProLogin.iOS", "ProLogin.iOS\ProLogin.iOS.csproj", "{5E8DB484-4EFE-4D40-B8EF-C8BD0BFA5276}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProLogin", "ProLogin\ProLogin.csproj", "{B7866BB6-EAC3-4B2F-A03E-E489D3966CA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProLogin", "ProLogin\ProLogin.csproj", "{B7866BB6-EAC3-4B2F-A03E-E489D3966CA1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{C4C83CBB-3439-435B-9EAD-A755CBF948AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

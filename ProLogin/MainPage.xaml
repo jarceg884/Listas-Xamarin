@@ -11,7 +11,7 @@
                 </Frame>
             </StackLayout>
 
-            <StackLayout Margin="-40,100,250,10" >
+            <StackLayout Margin="0,200,70,0" HorizontalOptions="EndAndExpand" VerticalOptions="Fill">
                 <Frame BackgroundColor="Green" WidthRequest="200" HeightRequest="80" CornerRadius="60">
                     <Label Text="LOG IN" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontSize="60" FontAttributes="Bold"/>
                 </Frame>
@@ -80,3 +80,5 @@
         </Grid>
     </StackLayout>
 </ContentPage>
+    
+
