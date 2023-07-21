@@ -13,8 +13,8 @@
 
             </StackLayout>
 
-            <StackLayout Padding="0" Margin="0" >
-                 <Image Source="LOGO.PNG" Aspect="AspectFill" Margin="80,-0"/>
+            <StackLayout Padding="0" Margin="40" >
+                 <Image Source="LOGO.PNG" Aspect="AspectFill"  Margin="80,100"/>
             </StackLayout>
 
 
