@@ -14,7 +14,7 @@ namespace ProLogin.Droid
 {
 	
 	
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "13.1.0.5")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "13.2.0.99")]
 	public partial class Resource
 	{
 		
@@ -16665,6 +16665,9 @@ namespace ProLogin.Droid
 			
 			// aapt resource value: 0x7F070090
 			public const int tooltip_frame_light = 2131165328;
+			
+			// aapt resource value: 0x7F070091
+			public const int x_circle = 2131165329;
 			
 			static Drawable()
 			{

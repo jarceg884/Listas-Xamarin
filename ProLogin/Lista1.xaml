@@ -1,12 +1,110 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProLogin.Lista1">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="ProLogin.Lista1"
+             BackgroundColor="YellowGreen">
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="550"/>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Frame BackgroundColor="Green" Margin="6" CornerRadius="25" Padding="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Frame WidthRequest="75" HeightRequest="75"
+                                   CornerRadius="50"
+                                   BorderColor="DarkOliveGreen" HasShadow="False"
+                                   Padding="0" Margin="5" HorizontalOptions="End">
+                        <Image Source="https://img.freepik.com/foto-gratis/retrato-sonriente-joven-encantador-camiseta-gris-pie-contra-fondo-liso_23-2148213406.jpg"
+                                       Aspect="AspectFill"
+                                       WidthRequest="50" HeightRequest="50" />
+                    </Frame>
+                    <StackLayout Grid.Column="1" VerticalOptions="CenterAndExpand">
+                        <Label Text="Juan Carlos de la Fuente" FontSize="Medium" FontAttributes="Bold" 
+                               VerticalOptions="CenterAndExpand" />
+                        <Label Text="JCaF32@ulala.com" FontSize="Caption" VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Grid.Column="2" VerticalOptions="CenterAndExpand" Margin="20">
+                        <Label Text="12-06-2023" FontSize="Caption" FontAttributes="Bold" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand"/>
+                        <Label Text="13:00" FontSize="Caption" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+
+                </Grid>
+            </Frame>
+            <ProgressBar ProgressColor="Green" HeightRequest="20" WidthRequest="1" x:Name="barraProgreso" Grid.Row="1"/>
+            <CollectionView x:Name="coleccion" Grid.Row="2" >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackLayout x:Name="parteIzquierda" Orientation="Horizontal" HorizontalOptions="Start" Grid.Column="0">
+                                <CheckBox x:Name="tachado" CheckedChanged="tachado_CheckedChanged" IsChecked="{Binding Check}"
+                                          Color="Black"
+                                         VerticalOptions="CenterAndExpand"  
+                                          Visual="Material"/>
+                                <Frame WidthRequest="50" HeightRequest="50"
+                                   CornerRadius="50"
+                                   BorderColor="Black" HasShadow="False"
+                                   Padding="0" Margin="5">
+                                    <Image Source="{Binding Url}"
+                                       Aspect="AspectFill"
+                                       MinimumWidthRequest="10" WidthRequest="10"/>
+                                </Frame>
+
+
+                                <Label Text="{Binding Nombre}" FontSize="Large"
+                                       FontAttributes="Bold" VerticalOptions="Center" Margin="10"/>
+
+
+                            </StackLayout>
+                            <StackLayout Grid.Column="1"  
+                                        
+                                         HorizontalOptions="End" 
+                                         VerticalOptions="Center"
+                                         Margin="5">
+                                <Image Source="x_circle.png"  WidthRequest="30" 
+                                         HeightRequest="25"  >
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Tapped="TapGestureRecognizer_Tapped"/>
+
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </StackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
+            <!--<BoxView Grid.Row="3" BackgroundColor="Black" HeightRequest="1" HorizontalOptions="FillAndExpand"  />-->
+            <StackLayout Grid.Row="3" Margin="10">
+                <Button Text="Agregar"     
+                    Clicked="Button_Clicked" 
+                    Visual="Material"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="DarkGreen"
+                    CornerRadius="20"/>
+
+                <Button x:Name="Enviar" Text="Enviar Lista" 
+                    Clicked="Enviar_Clicked"
+                    Visual="Material"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="DarkGreen"
+                    CornerRadius="20"/>
+            </StackLayout>
+
+        </Grid>
+    </ScrollView>
 </ContentPage>

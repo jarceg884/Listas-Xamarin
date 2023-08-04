@@ -66,6 +66,8 @@ namespace ProLogin
 
                             //cambio de página a menú en caso de ingreso éxitoso
                             await ((NavigationPage)this.Parent).PushAsync(new Menu());
+                            usuario.Text = "";
+                            contraseña.Text = "";
                             entrada = false;
                         }
                     }
