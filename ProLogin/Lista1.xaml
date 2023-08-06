@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProLogin.Lista1"
-             BackgroundColor="YellowGreen">
+             BackgroundColor="Beige">
     <ScrollView>
         <Grid>
             <Grid.RowDefinitions>
@@ -94,14 +94,14 @@
                     Clicked="Button_Clicked" 
                     Visual="Material"
                     HorizontalOptions="FillAndExpand"
-                    BackgroundColor="DarkGreen"
+                    BackgroundColor="#99b83c"
                     CornerRadius="20"/>
 
                 <Button x:Name="Enviar" Text="Enviar Lista" 
                     Clicked="Enviar_Clicked"
                     Visual="Material"
                     HorizontalOptions="FillAndExpand"
-                    BackgroundColor="DarkGreen"
+                    BackgroundColor="#99b83c"
                     CornerRadius="20"/>
             </StackLayout>
 

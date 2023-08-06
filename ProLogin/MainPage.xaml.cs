@@ -19,29 +19,40 @@ namespace ProLogin
         {
             InitializeComponent();
             loginBtn.Clicked += LoginBtn_Clicked;
+            //Pongo esto para hacer el testing de signin mas facil
+
+            
         }
 
-
+ 
 
         private async void LoginBtn_Clicked(object sender, EventArgs e)
         {
             // Obtener el usuario y la contraseña inssgresados por el usuario
+            if ((usuario.Text == "" || contraseña.Text == ""))
+            {
+                await DisplayAlert("ERROR", "Entradas Vacias!!", "OK");
+            }
+            else
+            {
 
+            
             HttpClient cliente = new HttpClient();
             //este es el link para el el REST
 
-            string apiUrl = "https://g8a0c0fa384744a-avance2.adb.us-sanjose-1.oraclecloudapps.com/ords/admin/usuarios/usuarios";
+            string apiUrl = "https://g8a0c0fa384744a-proyectocsharp.adb.us-sanjose-1.oraclecloudapps.com/ords/admin/usuarios/verificar";
+
+            Usuario user = new Usuario { user=usuario.Text, password = contraseña.Text };
+            var json = JsonConvert.SerializeObject(user);
+            var contentJson = new StringContent(json, Encoding.UTF8, "application/json");
+
             try
             {
-                HttpResponseMessage response = await cliente.GetAsync(apiUrl);
+                HttpResponseMessage response = await cliente.PostAsync(apiUrl, contentJson);
 
 
                 if (response.IsSuccessStatusCode)
                 {
-                    string contenido = await response.Content.ReadAsStringAsync();
-
-                    ArrayProblem data = JsonConvert.DeserializeObject<ArrayProblem>(contenido);
-
                     /*
                      * Usuario: Wilson777
                      * Contraseña: 1234
@@ -54,32 +65,23 @@ namespace ProLogin
                      * 
                      * DavidFlo
                      * 1234
-                    */
+            */
 
-                    bool entrada = true;
-                    foreach (var user in data.items)
-                    {
-                        if (user.username == usuario.Text && user.password == contraseña.Text)
-                        {
-                            // iniciar sesión exitosamente
-                            await DisplayAlert("Inicio de Sesión", "¡Inicio de Sesión Exitoso!", "Aceptar");
+                    
+                    // iniciar sesión exitosamente
+                    await DisplayAlert("Inicio de Sesión", "¡Inicio de Sesión Exitoso!", "Aceptar");
 
-                            //cambio de página a menú en caso de ingreso éxitoso
-                            await ((NavigationPage)this.Parent).PushAsync(new Menu());
-                            usuario.Text = "";
-                            contraseña.Text = "";
-                            entrada = false;
-                        }
-                    }
-                    if (entrada)
-                    {
-                        await DisplayAlert("Alerta", "Credenciales Invalidos", "Ok");
+                    //cambio de página a menú en caso de ingreso éxitoso
+                    await ((NavigationPage)this.Parent).PushAsync(new Menu(usuario.Text));
+                    
+                    usuario.Text = "";
+                    contraseña.Text = "";
 
-                    }
                 }
                 else
                 {
-                    Console.WriteLine($"failed to retrieve data. status code: {response.StatusCode}");
+                    await DisplayAlert("ERROR", "Credenciales Invalidas!!", "OK");
+
                 }
 
             }
@@ -88,8 +90,12 @@ namespace ProLogin
             {
                 Console.WriteLine($"an error occurred: {ex.Message}");
             }
+            }
         }
 
-
+        private async void signIn_Clicked(object sender, EventArgs e)
+        {
+            await((NavigationPage)this.Parent).PushAsync(new SignIn());
+        }
     }
 }

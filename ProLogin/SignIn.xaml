@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-             x:Class="ProLogin.MainPage">
-
+              xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             
+             x:Class="ProLogin.SignIn">
     <StackLayout BackgroundColor="Beige"  >
         <Grid>
 
-            <StackLayout Margin="0,50,00,0" HorizontalOptions="EndAndExpand" VerticalOptions="Fill">
-                <yummy:PancakeView  CornerRadius="60,0,60,0" BackgroundColor="Transparent">
-                    <Frame BackgroundColor="Green" WidthRequest="200" HeightRequest="80" >
-                        <Label Text="LOG IN" HorizontalOptions="Fill" VerticalOptions="Fill" TextColor="White" FontSize="60" FontAttributes="Bold"/>
+            <StackLayout Margin="0,50,00,0" HorizontalOptions="StartAndExpand" VerticalOptions="Fill">
+                <yummy:PancakeView  CornerRadius="0,60,0,60" BackgroundColor="Transparent">
+                    <Frame BackgroundColor="Green" WidthRequest="220" HeightRequest="80" >
+                        <Label Text="Sign Up" HorizontalOptions="Fill" VerticalOptions="Fill" TextColor="White" FontSize="60" FontAttributes="Bold"/>
                     </Frame>
                 </yummy:PancakeView>
             </StackLayout>
@@ -20,7 +20,7 @@
             </StackLayout>
 
 
-           
+
 
 
             <StackLayout Padding="0" Margin="30,350,30,0" HorizontalOptions="FillAndExpand">
@@ -32,6 +32,17 @@
 
 
                         <StackLayout Padding="0" Margin="15,10">
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="Beige" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                        <Image Source="https://www.citypng.com/public/uploads/preview/hd-letter-email-round-blue-icon-transparent-png-11637141038bsz4tzs1ur.png" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+
+
+
+                                    <Entry x:Name="email" Placeholder="Email"  TextColor="HotPink" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                </StackLayout>
+                            </Frame>
 
                             <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                 <StackLayout Orientation="Horizontal">
@@ -59,16 +70,12 @@
 
 
 
-                           <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="10">
-                                <Button Text="Sign IN" x:Name="loginBtn" Padding="15" BackgroundColor="#99b83c" TextColor="Black" FontSize="Medium" FontAttributes="Bold" CornerRadius="60" WidthRequest="200"/>
-                            </StackLayout>
-
-                        <StackLayout  Orientation="Horizontal" HorizontalOptions="Center" Margin="10">
-                                <AbsoluteLayout >
-                                    
-                                    <Label Text="Crear Cuenta"  TextDecorations="Underline"  BackgroundColor="Transparent"  />
-                                    <Button x:Name="signIn" BackgroundColor="Transparent" Clicked="signIn_Clicked" HeightRequest="20"/>
-                                </AbsoluteLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="10">
+                                <Button Text="Sign IN" x:Name="loginBtn" 
+                                        Padding="15" BackgroundColor="#99b83c" 
+                                        TextColor="Black" FontSize="Medium" 
+                                        FontAttributes="Bold" CornerRadius="60" 
+                                        WidthRequest="200" Clicked="signIn_Clicked"/>
                             </StackLayout>
 
 
@@ -83,5 +90,3 @@
         </Grid>
     </StackLayout>
 </ContentPage>
-    
-

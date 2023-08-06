@@ -7,8 +7,10 @@ namespace ProLogin
 {
     public class Usuario
     {
-        public string username { get; set; }
+        public string user { get; set; }
         public string password { get; set; }
+
+        public string email { get; set; }
         //public Usuario(string username, string password) 
         //{
         //    this.username = username;
@@ -16,9 +18,5 @@ namespace ProLogin
         //}
     }
 
-    public class ArrayProblem
-    {
-        public Usuario[] items { get; set; }
 
-    }
 }

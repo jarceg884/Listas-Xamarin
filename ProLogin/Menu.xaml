@@ -4,8 +4,7 @@
              x:Class="ProLogin.Menu">
     <ContentPage.Content>
         <StackLayout>
-            
-            <Label Text="MENU" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontSize="60" FontAttributes="Bold"/>
+            <Label Text="MENU" HorizontalOptions="Center" VerticalOptions="Center" TextColor="#422700" FontSize="60" FontAttributes="Bold"/>
             <Button Text="Productos" x:Name="productosBtn" BackgroundColor="GreenYellow" TextColor="Black" FontSize="Medium" FontAttributes="Bold" CornerRadius="60" />
             <Button Text="Lista 1" x:Name="lista1Btn" BackgroundColor="GreenYellow" TextColor="Black" FontSize="Medium" FontAttributes="Bold" CornerRadius="60" />
             <Button Text="Lista 2" x:Name="lista2Btn" BackgroundColor="GreenYellow" TextColor="Black" FontSize="Medium" FontAttributes="Bold" CornerRadius="60" />

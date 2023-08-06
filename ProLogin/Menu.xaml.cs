@@ -10,11 +10,17 @@ using Xamarin.Forms.Xaml;
 namespace ProLogin
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+    
     public partial class Menu : ContentPage
     {
-        public Menu()
+        public string username;
+       
+        public Menu(string username)
         {
             InitializeComponent();
+
+
+   
             //Inicializa boton lista 1
             lista1Btn.Clicked += Lista1Btn_Clicked;
             //Inicializa boton lista 2
@@ -23,6 +29,8 @@ namespace ProLogin
             productosBtn.Clicked += ProductosBtn_Clicked;
             //Inicializa boton ubicacion
             ubicacionBtn.Clicked += UbicacionBtn_Clicked;
+
+            Title = "Bienvenido " + username + "!";
         }
 
         private void UbicacionBtn_Clicked(object sender, EventArgs e)
