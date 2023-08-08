@@ -51,28 +51,28 @@ namespace ProLogin
                 HttpResponseMessage response = await cliente.PostAsync(apiUrl, contentJson);
 
 
-                if (response.IsSuccessStatusCode)
-                {
-                    /*
-                     * Usuario: Wilson777
-                     * Contraseña: 1234
-                     * 
-                     * MariRex
-                     * 1234
-                     * 
-                     * SamiBeast
-                     * 1234
-                     * 
-                     * DavidFlo
-                     * 1234
-            */
+                    if (response.IsSuccessStatusCode)
+                    {
+                        /*
+                         * Usuario: Wilson777
+                         * Contraseña: 1234
+                         * 
+                         * MariRex
+                         * 1234
+                         * 
+                         * SamiBeast
+                         * 1234
+                         * 
+                         * DavidFlo
+                         * 1234
+                */
 
-                    
-                    // iniciar sesión exitosamente
-                    await DisplayAlert("Inicio de Sesión", "¡Inicio de Sesión Exitoso!", "Aceptar");
 
-                    //cambio de página a menú en caso de ingreso éxitoso
-                    await ((NavigationPage)this.Parent).PushAsync(new Menu(usuario.Text));
+                        // iniciar sesión exitosamente
+                        await DisplayAlert("Inicio de Sesión", "¡Inicio de Sesión Exitoso!", "Aceptar");
+
+                        //cambio de página a menú en caso de ingreso éxitoso
+                        await Navigation.PushAsync(new Menu(usuario.Text));
                     
                     usuario.Text = "";
                     contraseña.Text = "";
@@ -95,7 +95,7 @@ namespace ProLogin
 
         private async void signIn_Clicked(object sender, EventArgs e)
         {
-            await((NavigationPage)this.Parent).PushAsync(new SignIn());
+            await Navigation.PushAsync(new SignIn());
         }
     }
 }

@@ -15,7 +15,7 @@
                 </yummy:PancakeView>
             </StackLayout>
 
-            <StackLayout Padding="0" Margin="50, 0, 0, 40" >
+            <StackLayout Padding="0" Margin="50, 40, 0, 40" >
                 <Image Source="LOGO.PNG" Aspect="AspectFill"  Margin="100,120"/>
             </StackLayout>
 

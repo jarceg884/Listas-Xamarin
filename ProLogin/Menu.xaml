@@ -1,28 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProLogin.Menu">
+             x:Class="ProLogin.Menu"
+                  NavigationPage.HasNavigationBar="False">
     <MasterDetailPage.Master>
-        <ContentPage Title="Menú">
+        <ContentPage Title="Menú" BackgroundColor="Beige">
             <StackLayout>
                 <Label Text="MENU" HorizontalOptions="Center" VerticalOptions="Center" TextColor="#422700" FontSize="60" FontAttributes="Bold"/>
                 <Button Text="Productos" x:Name="productosBtn" BackgroundColor="GreenYellow" TextColor="Black" FontSize="Medium" FontAttributes="Bold" CornerRadius="60" Clicked="OnMenuItemSelected" />
-                <Button Text="Lista 1" x:Name="lista1Btn" BackgroundColor="GreenYellow" TextColor="Black" FontSize="Medium" FontAttributes="Bold" CornerRadius="60" Clicked="OnMenuItemSelected" />
-                <Button Text="Lista 2" x:Name="lista2Btn" BackgroundColor="GreenYellow" TextColor="Black" FontSize="Medium" FontAttributes="Bold" CornerRadius="60" Clicked="OnMenuItemSelected" />
+
                 <Button Text="Ubicación" x:Name="ubicacionBtn" BackgroundColor="GreenYellow" TextColor="Black" FontSize="Medium" FontAttributes="Bold" CornerRadius="60" Clicked="OnMenuItemSelected" />
                 <Button Text="Ayuda" x:Name="ayudaBtn" BackgroundColor="GreenYellow" TextColor="Black" FontSize="Medium" FontAttributes="Bold" CornerRadius="60" Clicked="OnMenuItemSelected" />
                 <Button Text="Contacto" x:Name="contactoBtn" BackgroundColor="GreenYellow" TextColor="Black" FontSize="Medium" FontAttributes="Bold" CornerRadius="60" Clicked="OnMenuItemSelected" />
+                <Button Text="Salir" x:Name="salirBtn" BackgroundColor="GreenYellow" TextColor="Black" FontSize="Medium" FontAttributes="Bold" CornerRadius="60" Clicked="OnMenuItemSelected" />
+
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
-    <MasterDetailPage.Detail>
+    <MasterDetailPage.Detail >
         <NavigationPage>
             <x:Arguments>
-                <ContentPage>
-                    <ContentPage.Content>
-                        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <ContentPage BackgroundColor="Beige">
+                    <ContentPage.Content >
+                        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
+                            <Label Text="" x:Name="Bienvenido" TextColor="Black"/>
+                            <Button Text="Lista 1" x:Name="lista1Btn" BackgroundColor="GreenYellow" TextColor="Black" FontSize="Medium" FontAttributes="Bold" CornerRadius="60" Clicked="OnMenuItemSelected" />
+                            <Button Text="Lista 2" x:Name="lista2Btn" BackgroundColor="GreenYellow" TextColor="Black" FontSize="Medium" FontAttributes="Bold" CornerRadius="60" Clicked="OnMenuItemSelected" />
+
                             <Label Text="Bienvenido a nuestra aplicación" FontAttributes="Bold" FontSize="Large" />
                             <Label Text="Estamos encantados de tenerle con nosotros. Por favor, explore las opciones del menú para comenzar." TextColor="Gray" HorizontalTextAlignment="Center" />
+                            
                         </StackLayout>
                     </ContentPage.Content>
                 </ContentPage>

@@ -14,10 +14,10 @@ namespace ProLogin
         {
             InitializeComponent();
 
-            Title = "Bienvenido " + username + "!";
+            Bienvenido.Text = "Bienvenido " + username + "!";
         }
 
-        private void OnMenuItemSelected(object sender, EventArgs e)
+        private async void OnMenuItemSelected(object sender, EventArgs e)
         {
             var button = (Button)sender;
             switch (button.Text)
@@ -26,10 +26,7 @@ namespace ProLogin
                     Detail = new NavigationPage(new Productos());
                     break;
                 case "Lista 1":
-                    Detail = new NavigationPage(new Lista1());
-                    break;
-                case "Lista 2":
-                    Detail = new NavigationPage(new Lista2());
+                    await Navigation.PushAsync(new Lista1());
                     break;
                 case "Ubicación":
                     Detail = new NavigationPage(new Ubicacion());
@@ -39,6 +36,9 @@ namespace ProLogin
                     break;
                 case "Contacto":
                     Detail = new NavigationPage(new Contacto());
+                    break;
+                case "Salir":
+                   await Navigation.PopAsync();
                     break;
             }
             IsPresented = false; // cerrar el menú después de seleccionar una opción

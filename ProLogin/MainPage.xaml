@@ -15,7 +15,7 @@
                 </yummy:PancakeView>
             </StackLayout>
 
-            <StackLayout Padding="0" Margin="50, 0, 0, 40" >
+            <StackLayout Padding="0" Margin="40, 40, 0, 40" >
                 <Image Source="LOGO.PNG" Aspect="AspectFill"  Margin="100,120"/>
             </StackLayout>
 
@@ -39,7 +39,7 @@
                                         <Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
 
-                                    <Entry x:Name="usuario" Placeholder="Usuario" TextColor="HotPink" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    <Entry x:Name="usuario" Placeholder="Usuario" TextColor="Black"  HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
 
                                 </StackLayout>
                             </Frame>
@@ -52,7 +52,7 @@
 
 
 
-                                    <Entry x:Name="contraseña" Placeholder="Contraseña" IsPassword="True" TextColor="HotPink" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    <Entry x:Name="contraseña" Placeholder="Contraseña" IsPassword="True" TextColor="Black"  HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 
@@ -66,7 +66,7 @@
                         <StackLayout  Orientation="Horizontal" HorizontalOptions="Center" Margin="10">
                                 <AbsoluteLayout >
                                     
-                                    <Label Text="Crear Cuenta"  TextDecorations="Underline"  BackgroundColor="Transparent"  />
+                                    <Label Text="Crear Cuenta"  TextDecorations="Underline"  BackgroundColor="Transparent"  TextColor="Black"/>
                                     <Button x:Name="signIn" BackgroundColor="Transparent" Clicked="signIn_Clicked" HeightRequest="20"/>
                                 </AbsoluteLayout>
                             </StackLayout>

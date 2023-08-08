@@ -9,10 +9,14 @@ namespace ProLogin
         public App()
         {
             InitializeComponent();
-
+            Color topBarColor = Color.FromHex("#4daf51");
             //Inicialización de NavigationPage
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new MainPage())
+            {
 
+                BarBackgroundColor = topBarColor,
+
+            };
 
         }
 
