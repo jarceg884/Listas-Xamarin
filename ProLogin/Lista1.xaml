@@ -2,7 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProLogin.Lista1"
-             BackgroundColor="Beige">
+             BackgroundColor="Beige"
+             NavigationPage.HasBackButton="False">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Atras" Clicked="ToolbarItem_Back_Clicked" />
+    </ContentPage.ToolbarItems>
     <ScrollView>
         <Grid>
             <Grid.RowDefinitions>
@@ -27,9 +32,9 @@
                                        WidthRequest="50" HeightRequest="50" />
                     </Frame>
                     <StackLayout Grid.Column="1" VerticalOptions="CenterAndExpand">
-                        <Label Text="Juan Carlos de la Fuente" FontSize="Medium" FontAttributes="Bold" 
+                        <Label Text="" x:Name="nombreUsuario" FontSize="Medium" FontAttributes="Bold" 
                                VerticalOptions="CenterAndExpand" />
-                        <Label Text="JCaF32@ulala.com" FontSize="Caption" VerticalOptions="CenterAndExpand"/>
+                       
                     </StackLayout>
                     <StackLayout Grid.Column="2" VerticalOptions="CenterAndExpand" Margin="20">
                         <Label Text="12-06-2023" FontSize="Caption" FontAttributes="Bold" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand"/>
@@ -49,7 +54,7 @@
                             </Grid.ColumnDefinitions>
 
                             <StackLayout x:Name="parteIzquierda" Orientation="Horizontal" HorizontalOptions="Start" Grid.Column="0">
-                                <CheckBox x:Name="tachado" CheckedChanged="tachado_CheckedChanged" IsChecked="{Binding Check}"
+                                <CheckBox x:Name="tachado" CheckedChanged="tachado_CheckedChanged" IsChecked="{Binding Check}" 
                                           Color="Black"
                                          VerticalOptions="CenterAndExpand"  
                                           Visual="Material"/>
@@ -63,7 +68,10 @@
                                 </Frame>
 
 
-                                <Label Text="{Binding Nombre}" FontSize="Large"
+                                <Label Text="{Binding Nombre}" FontSize="Large" TextColor="Black"
+                                       FontAttributes="Bold" VerticalOptions="Center" Margin="10"/>
+
+                                <Label Text="{Binding Cantidad}" FontSize="Large" TextColor="Black"
                                        FontAttributes="Bold" VerticalOptions="Center" Margin="10"/>
 
 

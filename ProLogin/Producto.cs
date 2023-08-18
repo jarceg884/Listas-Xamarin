@@ -10,12 +10,16 @@ namespace ProLogin
         public string Nombre { get; set; }
         public string Url { get; set; }
 
-        public bool Check = false;
+        public float Cantidad { get; set; }
 
-        public Producto( string Nombre, string Url) 
+        public bool Check { get; set; }
+
+        public Producto( string Nombre, float Cantidad, string Url="", bool Check=false) 
         {
             this.Nombre = Nombre; 
             this.Url = Url;
+            this.Cantidad = Cantidad;
+            this.Check = Check;
         }   
     }
 }
