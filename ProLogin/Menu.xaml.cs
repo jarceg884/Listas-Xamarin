@@ -82,9 +82,6 @@ namespace ProLogin
                 case "Ayuda":
                     Detail = new NavigationPage(new Ayuda());
                     break;
-                case "Contacto":
-                    Detail = new NavigationPage(new Contacto());
-                    break;
                 case "Salir":
                    await Navigation.PopAsync();
                     break;

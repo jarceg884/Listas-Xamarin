@@ -221,7 +221,7 @@ namespace ProLogin
                 };
                 var json = JsonConvert.SerializeObject(borrarProducto);
                 var contentJson = new StringContent(json, Encoding.UTF8, "application/json");
-                var response = await clienteHTTP.PostAsync(url, contentJson);
+                var response = await clienteHTTP.PutAsync(url, contentJson);
 
             }
         }

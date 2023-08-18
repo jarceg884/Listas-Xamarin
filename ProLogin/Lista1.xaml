@@ -20,8 +20,8 @@
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="100"/>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="Auto"/>
+                   
+                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Frame WidthRequest="75" HeightRequest="75"
                                    CornerRadius="50"

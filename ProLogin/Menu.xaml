@@ -7,11 +7,9 @@
         <ContentPage Title="Menú" BackgroundColor="Beige">
             <StackLayout>
                 <Label Text="MENU" HorizontalOptions="Center" VerticalOptions="Center" TextColor="#422700" FontSize="60" FontAttributes="Bold"/>
-                <Button Text="Productos" x:Name="productosBtn" BackgroundColor="GreenYellow" TextColor="Black" FontSize="Medium" FontAttributes="Bold" CornerRadius="60" Clicked="OnMenuItemSelected" />
 
                 <Button Text="Ubicación" x:Name="ubicacionBtn" BackgroundColor="GreenYellow" TextColor="Black" FontSize="Medium" FontAttributes="Bold" CornerRadius="60" Clicked="OnMenuItemSelected" />
                 <Button Text="Ayuda" x:Name="ayudaBtn" BackgroundColor="GreenYellow" TextColor="Black" FontSize="Medium" FontAttributes="Bold" CornerRadius="60" Clicked="OnMenuItemSelected" />
-                <Button Text="Contacto" x:Name="contactoBtn" BackgroundColor="GreenYellow" TextColor="Black" FontSize="Medium" FontAttributes="Bold" CornerRadius="60" Clicked="OnMenuItemSelected" />
                 <Button Text="Salir" x:Name="salirBtn" BackgroundColor="GreenYellow" TextColor="Black" FontSize="Medium" FontAttributes="Bold" CornerRadius="60" Clicked="OnMenuItemSelected" />
 
             </StackLayout>
