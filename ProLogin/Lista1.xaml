@@ -23,13 +23,8 @@
                    
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Frame WidthRequest="75" HeightRequest="75"
-                                   CornerRadius="50"
-                                   BorderColor="DarkOliveGreen" HasShadow="False"
-                                   Padding="0" Margin="5" HorizontalOptions="End">
-                        <Image Source="https://img.freepik.com/foto-gratis/retrato-sonriente-joven-encantador-camiseta-gris-pie-contra-fondo-liso_23-2148213406.jpg"
-                                       Aspect="AspectFill"
-                                       WidthRequest="50" HeightRequest="50" />
+                    <Frame BackgroundColor="SkyBlue" HeightRequest="25" WidthRequest="25" CornerRadius="50" Padding="0" Margin="5">
+                        <Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill" Margin="0" HeightRequest="25" WidthRequest="25"/>
                     </Frame>
                     <StackLayout Grid.Column="1" VerticalOptions="CenterAndExpand">
                         <Label Text="" x:Name="nombreUsuario" FontSize="Medium" FontAttributes="Bold" 

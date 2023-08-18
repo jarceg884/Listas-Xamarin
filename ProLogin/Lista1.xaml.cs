@@ -107,7 +107,7 @@ namespace ProLogin
                 if (!productos.Any(obj => obj.Nombre.ToLower() == nombre.ToLower())
 )
                 {
-                    var newProducto = new Producto(nombre.ToLower(), float.Parse(cantidad) , "https://img.freepik.com/premium-vector/paper-bag-with-food-grocery-delivery-concept-vector-illustration-cartoon-style_650087-41.jpg");
+                    var newProducto = new Producto(nombre, float.Parse(cantidad) , "https://img.freepik.com/premium-vector/paper-bag-with-food-grocery-delivery-concept-vector-illustration-cartoon-style_650087-41.jpg");
                     productos.Add(newProducto);
 
                     //[INSERT AL DB TABLA LISTS]
