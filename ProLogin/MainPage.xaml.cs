@@ -10,6 +10,9 @@ using Xamarin.Forms;
 using System.Net;
 using ProLogin;
 using System.Xml.Linq;
+using Plugin.Connectivity;
+using Plugin.Connectivity.Abstractions;
+
 
 namespace ProLogin
 {
@@ -50,40 +53,47 @@ namespace ProLogin
             {
                 HttpResponseMessage response = await cliente.PostAsync(apiUrl, contentJson);
 
-
-                    if (response.IsSuccessStatusCode)
+                    if (CrossConnectivity.Current.IsConnected)
                     {
-                        /*
-                         * Usuario: Wilson777
-                         * Contraseña: 1234
-                         * 
-                         * MariRex
-                         * 1234
-                         * 
-                         * SamiBeast
-                         * 1234
-                         * 
-                         * DavidFlo
-                         * 1234
-                */
+                        //DO SOMETHING
+                        if (response.IsSuccessStatusCode)
+                        {
+                            /*
+                             * Usuario: Wilson777
+                             * Contraseña: 1234
+                             * 
+                             * MariRex
+                             * 1234
+                             * 
+                             * SamiBeast
+                             * 1234
+                             * 
+                             * DavidFlo
+                             * 1234
+                    */
 
 
-                        // iniciar sesión exitosamente
-                        await DisplayAlert("Inicio de Sesión", "¡Inicio de Sesión Exitoso!", "Aceptar");
+                            // iniciar sesión exitosamente
+                            await DisplayAlert("Inicio de Sesión", "¡Inicio de Sesión Exitoso!", "Aceptar");
 
-                        //cambio de página a menú en caso de ingreso éxitoso
-                        await Navigation.PushAsync(new Menu(usuario.Text));
-                    
-                    usuario.Text = "";
-                    contraseña.Text = "";
+                            //cambio de página a menú en caso de ingreso éxitoso
+                            await Navigation.PushAsync(new Menu(usuario.Text));
 
-                }
-                else
-                {
-                    await DisplayAlert("ERROR", "Credenciales Invalidas!!", "OK");
+                            usuario.Text = "";
+                            contraseña.Text = "";
 
-                }
+                        }
+                        else
+                        {
+                            await DisplayAlert("ERROR", "Credenciales Invalidas!!", "OK");
 
+                        }
+                    }
+                    else
+                    {
+
+                        await DisplayAlert("ERROR", "NO TIENES CONECCIÓN CON EL INTERNET!!", "OK");
+                    }
             }
 
             catch (Exception ex)
