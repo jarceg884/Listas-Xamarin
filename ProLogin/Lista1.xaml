@@ -32,8 +32,8 @@
                        
                     </StackLayout>
                     <StackLayout Grid.Column="2" VerticalOptions="CenterAndExpand" Margin="20">
-                        <Label Text="12-06-2023" FontSize="Caption" FontAttributes="Bold" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand"/>
-                        <Label Text="13:00" FontSize="Caption" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand"/>
+                        <Label Text="21-08-2023" FontSize="Caption" FontAttributes="Bold" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand"/>
+                        <!--<Label Text="13:00" FontSize="Caption" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand"/>-->
                     </StackLayout>
 
                 </Grid>
@@ -45,7 +45,7 @@
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
+                                <!--<ColumnDefinition Width="Auto"/>-->
                             </Grid.ColumnDefinitions>
 
                             <StackLayout x:Name="parteIzquierda" Orientation="Horizontal" HorizontalOptions="Start" Grid.Column="0">
@@ -75,7 +75,8 @@
                                         
                                          HorizontalOptions="End" 
                                          VerticalOptions="Center"
-                                         Margin="5">
+                                         Margin="5"
+                                         >
                                 <Image Source="x_circle.png"  WidthRequest="30" 
                                          HeightRequest="25"  >
                                     <Image.GestureRecognizers>
@@ -100,12 +101,6 @@
                     BackgroundColor="#99b83c"
                     CornerRadius="20"/>
 
-                <!--<Button x:Name="Enviar" Text="Enviar Lista" 
-                    Clicked="Enviar_Clicked"
-                    Visual="Material"
-                    HorizontalOptions="FillAndExpand"
-                    BackgroundColor="#99b83c"
-                    CornerRadius="20"/>-->
             </StackLayout>
 
         </Grid>

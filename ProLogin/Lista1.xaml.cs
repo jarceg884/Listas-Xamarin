@@ -150,9 +150,10 @@ namespace ProLogin
                     var checkbox = sender as CheckBox;
                     var parentsatackLayout = checkbox.Parent as StackLayout;
                     var label = parentsatackLayout.Children[2] as Label;
+
                     bool isChecked = e.Value;
                     var item = parentsatackLayout.BindingContext as Producto;
-
+                
                     int chequeado;
 
                     if (isChecked)
@@ -169,22 +170,21 @@ namespace ProLogin
                         barraProgreso.Progress = progreso / productos.Count;
                         label.TextDecorations = TextDecorations.None;
                         chequeado = 0;
-
+                        
                     }
 
-                    if (!base.OnBackButtonPressed())
+                  
+                    Item chequeoProducto = new Item
                     {
-                        Item chequeoProducto = new Item
-                        {
-                            CHECKED = chequeado,
-                            LIST_NAME = lista_nombre,
-                            USERNAME = usuario,
-                            PRODUCT_NAME = label.Text,
-                        };
-                        var json = JsonConvert.SerializeObject(chequeoProducto);
-                        var contentJson = new StringContent(json, Encoding.UTF8, "application/json");
-                        var response = await clienteHTTP.PutAsync(apiUrl, contentJson);
-                    }
+                        CHECKED = chequeado,
+                        LIST_NAME = lista_nombre,
+                        USERNAME = usuario,
+                        PRODUCT_NAME = item.Nombre,
+                    };
+                    var json = JsonConvert.SerializeObject(chequeoProducto);
+                    var contentJson = new StringContent(json, Encoding.UTF8, "application/json");
+                    var response = await clienteHTTP.PutAsync(apiUrl, contentJson);
+            
 
                 }
 
@@ -193,21 +193,25 @@ namespace ProLogin
             {
                 Console.WriteLine(ex.Message);
             }
-
+      
         }
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            //este montonde codigo y de var es para encontrar el checkbox
+            //este es para sacar el objeto que tiene 
             var tappedItem = (sender as Image)?.BindingContext as Producto;
             var tappedImage = (sender as Image);
+
+            //este montonde codigo y de var es para encontrar el checkbox
             var parentGrid = tappedImage?.Parent.Parent as Grid;
             var parentStackLayout = parentGrid?.Children[0] as StackLayout;
             var checkBox = parentStackLayout.Children[0] as CheckBox;
 
-            //aqui evalua si el checkbox es true o false 
+
+            
             if (tappedItem != null)
             {
+                
                 barraProgreso.Progress = progreso / productos.Count;
                 productos.Remove(tappedItem);
 
