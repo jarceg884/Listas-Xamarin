@@ -91,8 +91,19 @@ namespace ProLogin
                     var googleMapsUrl = $"https://www.google.com/maps/search/?api=1&query={searchQuery}&center={latitude},{longitude}";
                     await Browser.OpenAsync(googleMapsUrl, BrowserLaunchMode.SystemPreferred);
                     break;
+                //case "Lista":
+                //    if (Detail is NavigationPage navigationPage && navigationPage.CurrentPage is Ayuda)
+                //    {
+
+                //        await Navigation.PushAsync(new Lista1());
+                //    }
+                    
+                    break;
                 case "Ayuda":
-                    Detail = new NavigationPage(new Ayuda());
+                        await Navigation.PushAsync(new Ayuda());
+    
+                    
+                    //Detail = new NavigationPage(new Ayuda());
                     break;
                 case "Salir":
                    await Navigation.PopAsync();

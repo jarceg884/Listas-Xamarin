@@ -2,7 +2,9 @@
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProLogin.Menu"
-                  NavigationPage.HasNavigationBar="False">
+                  NavigationPage.HasNavigationBar="False"
+                  >
+                  
     <MasterDetailPage.Master>
         <ContentPage Title="Menú" BackgroundColor="Beige">
             <StackLayout>
@@ -10,6 +12,7 @@
 
                 <Button Text="Ubicación" x:Name="ubicacionBtn" BackgroundColor="GreenYellow" TextColor="Black" FontSize="Medium" FontAttributes="Bold" CornerRadius="60" Clicked="OnMenuItemSelected" />
                 <Button Text="Ayuda" x:Name="ayudaBtn" BackgroundColor="GreenYellow" TextColor="Black" FontSize="Medium" FontAttributes="Bold" CornerRadius="60" Clicked="OnMenuItemSelected" />
+                <!--<Button Text="Lista" x:Name="listaBtn" BackgroundColor="GreenYellow" TextColor="Black" FontSize="Medium" FontAttributes="Bold" CornerRadius="60" Clicked="OnMenuItemSelected" />-->
                 <Button Text="Salir" x:Name="salirBtn" BackgroundColor="GreenYellow" TextColor="Black" FontSize="Medium" FontAttributes="Bold" CornerRadius="60" Clicked="OnMenuItemSelected" />
 
             </StackLayout>

@@ -100,12 +100,12 @@
                     BackgroundColor="#99b83c"
                     CornerRadius="20"/>
 
-                <Button x:Name="Enviar" Text="Enviar Lista" 
+                <!--<Button x:Name="Enviar" Text="Enviar Lista" 
                     Clicked="Enviar_Clicked"
                     Visual="Material"
                     HorizontalOptions="FillAndExpand"
                     BackgroundColor="#99b83c"
-                    CornerRadius="20"/>
+                    CornerRadius="20"/>-->
             </StackLayout>
 
         </Grid>
