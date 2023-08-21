@@ -10,6 +10,7 @@ using System.Linq;
 
 using static ProLogin.Lista1;
 using static ProLogin.Lista1.Item;
+using Xamarin.Essentials;
 
 namespace ProLogin
 {
@@ -77,7 +78,18 @@ namespace ProLogin
             {
      
                 case "Ubicación":
-                    Detail = new NavigationPage(new Ubicacion());
+                    var latitude = 9.9333300;
+                    var longitude = -84.0833300;
+
+                    // Abrir tu ubicación
+                    var location = new Location(latitude, longitude);
+                    var options = new MapLaunchOptions { Name = "Mi ubicación" };
+                    await Map.OpenAsync(location, options);
+
+                    // Abrir Google Maps con búsqueda de supermercados cercanos
+                    var searchQuery = Uri.EscapeUriString("supermercados near me");
+                    var googleMapsUrl = $"https://www.google.com/maps/search/?api=1&query={searchQuery}&center={latitude},{longitude}";
+                    await Browser.OpenAsync(googleMapsUrl, BrowserLaunchMode.SystemPreferred);
                     break;
                 case "Ayuda":
                     Detail = new NavigationPage(new Ayuda());
